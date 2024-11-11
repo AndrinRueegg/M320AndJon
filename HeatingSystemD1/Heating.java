@@ -5,7 +5,7 @@ public class Heating {
     private int increment;
     private String roomName;
 
-    // Constructor with initial temperature, min, max, increment values, and room name
+
     public Heating(String roomName, int temperature, int min, int max, int increment) {
         this.roomName = roomName;
         this.temperature = temperature;
@@ -14,7 +14,7 @@ public class Heating {
         this.increment = increment;
     }
 
-    // Method to increase the temperature
+
     public void warmer() {
         if (temperature + increment <= max) {
             temperature += increment;
@@ -24,7 +24,7 @@ public class Heating {
         }
     }
 
-    // Method to decrease the temperature
+
     public void colder() {
         if (temperature - increment >= min) {
             temperature -= increment;
@@ -34,12 +34,12 @@ public class Heating {
         }
     }
 
-    // Method to get the current temperature
+
     public int getTemperature() {
         return temperature;
     }
 
-    // Method to display the current temperature
+
     public void displayTemperature() {
         System.out.println(roomName + " current temperature: " + temperature + "°C");
     }

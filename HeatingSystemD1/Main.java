@@ -4,14 +4,13 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Creating Heating objects for each room
         Heating bedroom = new Heating("Bedroom", 20, 15, 30, 2);
         Heating diningRoom = new Heating("Dining Room", 22, 15, 30, 2);
         Heating bathroom = new Heating("Bathroom", 24, 15, 30, 2);
 
         boolean running = true;
 
-        // Instruction for the user
+
         System.out.println("Control the temperature with commands: ");
         System.out.println("- Type 'warmer <room>' to increase the temperature (e.g., 'warmer bedroom').");
         System.out.println("- Type 'colder <room>' to decrease the temperature (e.g., 'colder diningroom').");

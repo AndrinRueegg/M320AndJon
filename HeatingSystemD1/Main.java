@@ -12,9 +12,9 @@ public class Main {
 
 
         System.out.println("Control the temperature with commands: ");
-        System.out.println("- Type 'warmer <room>' to increase the temperature (e.g., 'warmer bedroom').");
-        System.out.println("- Type 'colder <room>' to decrease the temperature (e.g., 'colder diningroom').");
-        System.out.println("- Type 'status <room>' to see the temperature (e.g., 'status bathroom').");
+        System.out.println("- Type 'warmer <room>' to increase the temperature ('warmer bedroom').");
+        System.out.println("- Type 'colder <room>' to decrease the temperature ('colder diningroom').");
+        System.out.println("- Type 'status <room>' to see the temperature ('status bathroom').");
         System.out.println("- Type 'exit' to end the program.");
 
         while (running) {

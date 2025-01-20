@@ -1,5 +1,18 @@
 import java.util.ArrayList;
 
+/**
+ * Manages a list of players and handles team activities.
+ * <p>
+ * Generated on 2025-01-20
+ * </p>
+ *
+ *
+ *
+ * @author
+ *         andrinrueegg,
+ *         indianajones
+ * @version 1.0
+ */
 public class Team {
     private ArrayList<Player> playerList;
 
@@ -7,6 +20,11 @@ public class Team {
         playerList = new ArrayList<>();
     }
 
+    /**
+     * Adds a player to the team.
+     *
+     * @param player the player to add
+     */
     public void addPlayer(Player player) {
         playerList.add(player);
     }
@@ -16,7 +34,6 @@ public class Team {
             player.play();
         }
     }
-
 
     public ArrayList<Forward> getForwards() {
         ArrayList<Forward> forwards = new ArrayList<>();

@@ -1,10 +1,55 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Provides a console-based interface to manage the football team.
+ * <p>
+ * Generated on 2025-01-20
+ * </p>
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ */
 public class Main {
     private static Scanner scanner;
     private static Team team;
 
+    /**
+     * Entry point for the application.
+     *
+     * @param args command-line arguments (not used)
+     */
     public static void main(String[] args) {
         scanner = new Scanner(System.in);
         team = new Team();
@@ -19,7 +64,7 @@ public class Main {
             System.out.println("4. Exit");
 
             int choice = scanner.nextInt();
-            scanner.nextLine();
+            scanner.nextLine(); // consume leftover newline
 
             switch (choice) {
                 case 1:
@@ -46,22 +91,25 @@ public class Main {
 
         System.out.println("Choose the position (1=Goalkeeper, 2=Forward, 3=Defender):");
         int position = scanner.nextInt();
-        scanner.nextLine();
+        scanner.nextLine(); // consume leftover newline
 
         switch (position) {
             case 1:
                 System.out.println("Enter the height of the goalkeeper:");
                 double height = scanner.nextDouble();
+                scanner.nextLine(); // consume newline
                 team.addPlayer(new Goalkeeper(name, height));
                 break;
             case 2:
                 System.out.println("Enter the number of goals for the forward:");
                 int goals = scanner.nextInt();
+                scanner.nextLine(); // consume newline
                 team.addPlayer(new Forward(name, goals));
                 break;
             case 3:
-                System.out.println("Enter the defense values for the defender:");
+                System.out.println("Enter the defense value for the defender:");
                 int defense = scanner.nextInt();
+                scanner.nextLine(); // consume newline
                 team.addPlayer(new Defender(name, defense));
                 break;
             default:
@@ -70,26 +118,24 @@ public class Main {
     }
 
     private static void makeForwardJog() {
-
         ArrayList<Forward> forwards = team.getForwards();
         if (forwards.isEmpty()) {
             System.out.println("No forwards available in the team.");
             return;
         }
 
-
         System.out.println("Select a forward to jog:");
         for (int i = 0; i < forwards.size(); i++) {
+            // Access the forward's name (inherited field)
             System.out.println((i + 1) + ". " + forwards.get(i).name);
         }
 
         int choice = scanner.nextInt();
-        scanner.nextLine();
+        scanner.nextLine(); // consume newline
 
         if (choice < 1 || choice > forwards.size()) {
             System.out.println("Invalid choice.");
         } else {
-
             Forward selectedForward = forwards.get(choice - 1);
             selectedForward.jogTraining();
             System.out.println(selectedForward.name + " is now jogging!");

@@ -9,44 +9,21 @@ import java.util.Scanner;
  *
  *
  *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
  */
 public class Main {
+
+    /**
+     * Scanner for reading user input from console.
+     */
     private static Scanner scanner;
+
+    /**
+     * The football team to be managed.
+     */
     private static Team team;
 
     /**
-     * Entry point for the application.
+     * Main entry point for the application.
      *
      * @param args command-line arguments (not used)
      */
@@ -85,6 +62,9 @@ public class Main {
         }
     }
 
+    /**
+     * Prompts the user for player details and creates a corresponding player.
+     */
     private static void createPlayer() {
         System.out.println("Enter the player's name:");
         String name = scanner.nextLine();
@@ -97,19 +77,19 @@ public class Main {
             case 1:
                 System.out.println("Enter the height of the goalkeeper:");
                 double height = scanner.nextDouble();
-                scanner.nextLine(); // consume newline
+                scanner.nextLine();
                 team.addPlayer(new Goalkeeper(name, height));
                 break;
             case 2:
                 System.out.println("Enter the number of goals for the forward:");
                 int goals = scanner.nextInt();
-                scanner.nextLine(); // consume newline
+                scanner.nextLine();
                 team.addPlayer(new Forward(name, goals));
                 break;
             case 3:
                 System.out.println("Enter the defense value for the defender:");
                 int defense = scanner.nextInt();
-                scanner.nextLine(); // consume newline
+                scanner.nextLine();
                 team.addPlayer(new Defender(name, defense));
                 break;
             default:
@@ -117,6 +97,9 @@ public class Main {
         }
     }
 
+    /**
+     * Lets the user select a forward from the team and starts jogging training for that forward.
+     */
     private static void makeForwardJog() {
         ArrayList<Forward> forwards = team.getForwards();
         if (forwards.isEmpty()) {
@@ -126,12 +109,11 @@ public class Main {
 
         System.out.println("Select a forward to jog:");
         for (int i = 0; i < forwards.size(); i++) {
-            // Access the forward's name (inherited field)
             System.out.println((i + 1) + ". " + forwards.get(i).name);
         }
 
         int choice = scanner.nextInt();
-        scanner.nextLine(); // consume newline
+        scanner.nextLine();
 
         if (choice < 1 || choice > forwards.size()) {
             System.out.println("Invalid choice.");

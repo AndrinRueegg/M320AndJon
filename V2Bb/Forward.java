@@ -4,13 +4,19 @@
  * Generated on 2025-01-20
  * </p>
  *
- * @author
- *         andrinrueegg,
- *         indianajones
- * @version 1.0
+ *
+ *
  */
 public class Forward extends Player {
+
+    /**
+     * Total goals scored by the forward.
+     */
     private int goals;
+
+    /**
+     * Indicates if the forward is currently jogging.
+     */
     private boolean isJogging;
 
     /**
@@ -25,6 +31,9 @@ public class Forward extends Player {
         this.isJogging = false;
     }
 
+    /**
+     * Prints the forward's current action (jogging or attacking).
+     */
     @Override
     public void play() {
         if (isJogging) {
@@ -34,10 +43,16 @@ public class Forward extends Player {
         }
     }
 
+    /**
+     * Sets the forward to a jogging state.
+     */
     public void jogTraining() {
         isJogging = true;
     }
 
+    /**
+     * Stops the forward from jogging.
+     */
     public void stopJogging() {
         isJogging = false;
     }

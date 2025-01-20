@@ -8,14 +8,17 @@ import java.util.ArrayList;
  *
  *
  *
- * @author
- *         andrinrueegg,
- *         indianajones
- * @version 1.0
  */
 public class Team {
+
+    /**
+     * List of players in the team.
+     */
     private ArrayList<Player> playerList;
 
+    /**
+     * Creates an empty team.
+     */
     public Team() {
         playerList = new ArrayList<>();
     }
@@ -29,12 +32,20 @@ public class Team {
         playerList.add(player);
     }
 
+    /**
+     * Starts the game by calling the play() method on each player.
+     */
     public void startGame() {
         for (Player player : playerList) {
             player.play();
         }
     }
 
+    /**
+     * Gets all forwards in the team.
+     *
+     * @return a list of Forward objects
+     */
     public ArrayList<Forward> getForwards() {
         ArrayList<Forward> forwards = new ArrayList<>();
         for (Player player : playerList) {

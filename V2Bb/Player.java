@@ -10,6 +10,10 @@
  * @version 1.0
  */
 public class Player {
+
+    /**
+     * Name of the player.
+     */
     protected String name;
 
     /**
@@ -21,10 +25,16 @@ public class Player {
         this.name = name;
     }
 
+    /**
+     * Prints a message indicating that the player is playing.
+     */
     public void play() {
         System.out.println(name + " is playing!");
     }
 
+    /**
+     * Prints the player's name to the console.
+     */
     public void showName() {
         System.out.println("Player Name: " + name);
     }

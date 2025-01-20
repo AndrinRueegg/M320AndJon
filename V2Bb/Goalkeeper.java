@@ -4,12 +4,27 @@
  * Generated on 2025-01-20
  * </p>
  *
- * @author
- *         andrinrueegg,
- *         indianajones
- * @version 1.0
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
  */
 public class Goalkeeper extends Player {
+
+    /**
+     * Goalkeeper's height in meters.
+     */
     private double height;
 
     /**
@@ -23,6 +38,9 @@ public class Goalkeeper extends Player {
         this.height = height;
     }
 
+    /**
+     * Prints a message indicating that this player is a goalkeeper and is defending the goal.
+     */
     @Override
     public void play() {
         System.out.println(name + " is the goalkeeper and defends the goal!");

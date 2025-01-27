@@ -3,6 +3,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
+// Unit tests for the `friendships` class.
 public class FriendshipTest {
     private friendships friendships;
 
@@ -20,16 +21,19 @@ public class FriendshipTest {
 
     @Test
     void testGetFriendsList() {
+        // Verifies that "Joe" has 2 friends.
         assertEquals(2, friendships.getFriendsList("Joe").size());
     }
 
     @Test
     void testAreFriends() {
+        // Checks that "Joe" and "Audrey" are friends.
         assertTrue(friendships.areFriends("Joe", "Audrey"));
     }
 
     @Test
     void testSearchPerson() {
+        // Confirms "Joe" exists, and "Alice" does not.
         assertTrue(friendships.searchPerson("Joe"));
         assertFalse(friendships.searchPerson("Alice"));
     }

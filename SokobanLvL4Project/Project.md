@@ -43,6 +43,9 @@ KeyEvent.VK_W, () -> {
     onPlayerMove(); // Update the UI in GameIO
 },
 ```
+<br>
+![image](https://github.com/user-attachments/assets/389a92f2-3aaf-4ef5-a3fc-62e2ac186b63)
+
 Here, `GameIO` delegates the logic of movement to the `Game` class while keeping its focus on rendering and input management.
 
 ### Portal Handling
@@ -54,6 +57,9 @@ if (exitPos != null) {
     newY = exitPos.y;
 }
 ```
+<br>
+
+![image](https://github.com/user-attachments/assets/c6012e90-365b-4a4c-ac1b-322b0f472f1f)
 
 ### Dialogs with `CustomDialog`
 We use the `CustomDialog` class to handle all user interactions involving input or alerts. This separates UI-related tasks like showing level titles or error messages from other logic, maintaining a modular codebase:
@@ -71,6 +77,9 @@ public interface InformationDisplay {
     String getInformation();
 }
 ```
+
+![image](https://github.com/user-attachments/assets/4f0f8d98-1f3d-4cbb-99da-895f84233862)
+
 Example of polymorphism:
 ```java
 AboutCreator aboutCreator = new AboutCreator();
@@ -96,6 +105,9 @@ switch (tileVal) {
         g2d.fillRect(px, py, scale, scale);
 }
 ```
+
+![image](https://github.com/user-attachments/assets/f8c53e75-e550-42a6-a613-f225e98275af)
+
 This demonstrates polymorphic behavior where different tile types (walls, boxes, portals, etc.) are rendered appropriately based on their values.
 
 ## 🚨 Custom Exceptions
@@ -106,6 +118,12 @@ This exception is used to handle invalid portal interactions. For example, if a 
 ```java
 throw new PortalException("Player stuck after portal! Invalid block: " + gameField[idealY][idealX]);
 ```
+
+![image](https://github.com/user-attachments/assets/8b570c7e-9a4a-4076-acad-d367e77cc2d8)
+
+![image](https://github.com/user-attachments/assets/a8282bb8-a737-46f8-910e-48dac9c2e344)
+
+
 By using this exception, we ensure that portal-related logic is cleanly separated and errors are descriptive.
 
 ### `InvalidLevelException`
@@ -125,5 +143,17 @@ try {
     CustomDialog.alert(e.getMessage(), "Error");
 }
 ```
+
+## Project Screenshots
+
+![image](https://github.com/user-attachments/assets/9f6bc049-dd64-4884-9020-29bcdd531a39)
+
+![image](https://github.com/user-attachments/assets/e19eeec7-8e2d-4e0d-97a5-c6eb723d3a61)
+
+![image](https://github.com/user-attachments/assets/f58009e5-6741-4941-b2f7-4fe33dd59b61)
+
+![image](https://github.com/user-attachments/assets/e84ea217-28d5-426d-8ea0-78e45543fb54)
+
+![image](https://github.com/user-attachments/assets/c073eaed-ce52-45e4-ac81-acd53db49b0b)
 
 

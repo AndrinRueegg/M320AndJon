@@ -28,4 +28,7 @@ This project is a Sokoban-inspired puzzle game developed in Java, featuring enha
 This project was created as a learning experience to explore object-oriented design principles, game mechanics, and interactive UI development in Java.
 
 ## Screenshots
-*Include screenshots here if available*
+**Sequence diagramm:**  ![image](https://github.com/user-attachments/assets/bfe1f64b-f4ab-4dba-965a-602c61195adc)
+**Class diagramm:** ![image](https://github.com/user-attachments/assets/f6ac7497-eea1-4da6-8ad2-4ce4798c663d)
+
+

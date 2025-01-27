@@ -29,6 +29,7 @@ This project was created as a learning experience to explore object-oriented des
 
 ## Screenshots
 **Sequence diagramm:**  ![image](https://github.com/user-attachments/assets/bfe1f64b-f4ab-4dba-965a-602c61195adc)
-**Class diagramm:** ![image](https://github.com/user-attachments/assets/f6ac7497-eea1-4da6-8ad2-4ce4798c663d)
+**Class diagramm:** ![image](https://github.com/user-attachments/assets/b7a1ba09-d280-4a0f-a913-7a04ad2a23e6)
+
 
 
